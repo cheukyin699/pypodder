@@ -16,10 +16,12 @@ def main():
         flist.reverse()
         downfiles = []
 
+        # Print out all available things to download
+        for i in range(len(flist)):
+            print('%d) %s' % (i, flist[i][0]))
+
         # Show the interface
         while running:
-            for i in range(len(flist)):
-                print('%d) %s' % (i, flist[i][0]))
 
             sel = input('Download what? (q)uit or [0-%d]: ' % (len(flist)-1))
 
